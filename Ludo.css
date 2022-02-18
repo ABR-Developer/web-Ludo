@@ -1,0 +1,449 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: green;
+    --yellow: yellow;
+    --blue: blue;
+    --red: red;
+    --white: white;
+}
+
+.container {
+    background-image: url(background.jpg);
+    background-size: 25% 50%;
+    height: 100vh;
+}
+
+#diceToRoll {
+    z-index: 1;
+    position: absolute;
+    top: 275px;
+    left: 275px;
+    height: 50px;
+    width: 50px;
+    /* background-color: white; */
+    border: 5px solid white;
+    background-image: url(DiceGif.gif);
+    background-size: cover;
+    /* animation: like-gif steps(28) 1s infinite both; */
+    /* background-image: url(1.png); */
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.GreenDice,
+.YellowDice,
+.BlueDice,
+.RedDice {
+    position: absolute;
+    border: 2px solid black;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+#GreenDice1 {
+    background-color: var(--green);
+    top: 55px;
+    left: 55px;
+}
+
+#GreenDice2 {
+    background-color: var(--green);
+    top: 55px;
+    left: 150px;
+}
+
+#GreenDice3 {
+    background-color: var(--green);
+    top: 150px;
+    left: 55px;
+}
+
+#GreenDice4 {
+    background-color: var(--green);
+    top: 150px;
+    left: 150px;
+}
+
+#YellowDice1 {
+    background-color: var(--yellow);
+    top: 55px;
+    left: 415px;
+}
+
+#YellowDice2 {
+    background-color: var(--yellow);
+    top: 55px;
+    left: 510px;
+}
+
+#YellowDice3 {
+    background-color: var(--yellow);
+    top: 150px;
+    left: 415px;
+}
+
+#YellowDice4 {
+    background-color: var(--yellow);
+    top: 150px;
+    left: 510px;
+}
+
+#BlueDice1 {
+    background-color: var(--blue);
+    top: 415px;
+    left: 415px;
+}
+
+#BlueDice2 {
+    background-color: var(--blue);
+    top: 415px;
+    left: 510px;
+}
+
+#BlueDice3 {
+    background-color: var(--blue);
+    top: 510px;
+    left: 415px;
+}
+
+#BlueDice4 {
+    background-color: var(--blue);
+    top: 510px;
+    left: 510px;
+}
+
+#RedDice1 {
+    background-color: var(--red);
+    top: 415px;
+    left: 55px;
+}
+
+#RedDice2 {
+    background-color: var(--red);
+    top: 415px;
+    left: 150px;
+}
+
+#RedDice3 {
+    background-color: var(--red);
+    top: 510px;
+    left: 55px;
+}
+
+#RedDice4 {
+    background-color: var(--red);
+    top: 510px;
+    left: 150px;
+}
+
+#Ludo {
+    z-index: 1;
+    position: relative;
+    margin: auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: repeat(5, 120px);
+    width: 600px;
+    /* opacity: 100%; */
+}
+
+.PlayerBox {
+    border: 2px solid black;
+    display: grid;
+}
+
+#GreenBox {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: var(--green);
+}
+
+#YellowBox {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: var(--yellow);
+}
+
+#BlueBox {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background-color: var(--blue);
+}
+
+#RedBox {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background-color: var(--red);
+}
+
+#position {
+    background-color: var(--white);
+}
+
+#path-1>#line1>#position:nth-child(2) {
+    background-color: var(--green);
+}
+
+#path-2>#line1>#position:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+#path-3>#line1>#position:nth-child(2) {
+    background-color: var(--blue);
+}
+
+#path-4>#line1>#position:nth-child(2) {
+    background-color: var(--red);
+}
+
+#path-1>#line2>#position:nth-child(n + 2) {
+    background-color: var(--green);
+}
+
+#path-2>#line2>#position:nth-child(n + 2) {
+    background-color: var(--yellow);
+}
+
+#path-3>#line2>#position:nth-child(n + 2) {
+    background-color: var(--blue);
+}
+
+#path-4>#line2>#position:nth-child(n + 2) {
+    background-color: var(--red);
+}
+
+#path-1>#line3>#position:nth-child(3) {
+    background-color: var(--green);
+}
+
+#path-2>#line3>#position:nth-child(3) {
+    background-color: var(--yellow);
+}
+
+#path-3>#line3>#position:nth-child(3) {
+    background-color: var(--blue);
+}
+
+#path-4>#line3>#position:nth-child(3) {
+    background-color: var(--red);
+}
+
+#path-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+#path-1>.line {
+    flex-basis: 40px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+}
+
+#path-1>.line>#position {
+    border: 1px solid black;
+    flex-basis: 40px;
+}
+
+#path-3 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#path-3>.line {
+    flex-basis: 40px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#path-3>.line>#position {
+    border: 1px solid black;
+    flex-basis: 40px;
+}
+
+#path-2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#path-2>.line {
+    flex-basis: 40px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+
+#path-2>.line>#position {
+    border: 1px solid black;
+    flex-basis: 40px;
+}
+
+#path-4 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    display: flex;
+    flex-direction: row;
+}
+
+#path-4>.line {
+    flex-basis: 40px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#path-4>.line>#position {
+    border: 1px solid black;
+    flex-basis: 40px;
+}
+
+.DiceBox {
+    /* border: 2px solid black; */
+    margin: 10%;
+    border-radius: 10%;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+}
+
+.Dice-1-Box {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* border: 2px solid black; */
+    border-radius: 10%;
+    margin: 20%;
+}
+
+.Dice-2-Box {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* border: 2px solid black; */
+    border-radius: 10%;
+    margin: 20%;
+}
+
+.Dice-3-Box {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* border: 2px solid black; */
+    border-radius: 10%;
+    margin: 20%;
+}
+
+.Dice-4-Box {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* border: 2px solid black; */
+    border-radius: 10%;
+    margin: 20%;
+}
+
+#GreenDice-1-Box,
+#GreenDice-2-Box,
+#GreenDice-3-Box,
+#GreenDice-4-Box {
+    background-color: var(--green);
+}
+
+#YellowDice-1-Box,
+#YellowDice-2-Box,
+#YellowDice-3-Box,
+#YellowDice-4-Box {
+    background-color: var(--yellow);
+}
+
+#BlueDice-1-Box,
+#BlueDice-2-Box,
+#BlueDice-3-Box,
+#BlueDice-4-Box {
+    background-color: var(--blue);
+}
+
+#RedDice-1-Box,
+#RedDice-2-Box,
+#RedDice-3-Box,
+#RedDice-4-Box {
+    background-color: var(--red);
+}
+
+#CenterBox {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 2px solid black;
+}
+
+.Arrow {
+    border-left: 58px solid green;
+    border-right: 58px solid blue;
+    border-top: 58px solid yellow;
+    border-bottom: 58px solid red;
+}
+
+
+/* #GreenArrow
+{
+	border-top: 60px solid transparent;
+	border-left: 60px solid green;
+	border-bottom: 60px solid transparent;
+}
+#YellowArrow
+{
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-top: 60px solid yellow;
+}
+#BlueArrow
+{
+	border-top: 60px solid transparent;
+	border-right: 60px solid blue;
+	border-bottom: 60px solid transparent;
+}
+
+#RedArrow
+{
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-bottom: 60px solid red;
+} */
