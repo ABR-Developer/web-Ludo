@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo</title>
+    <link rel="stylesheet" href="Ludo.css">
+</head>
+
+<body>
+    <div class="container">
+        <div Id="Ludo">
+            <button id="diceToRoll" onclick="rollDice(event)"></button>
+            <button class="GreenDice" id="GreenDice1" onclick="movePieces(event)" disabled></button>
+            <button class="GreenDice" id="GreenDice2" onclick="movePieces(event)" disabled></button>
+            <button class="GreenDice" id="GreenDice3" onclick="movePieces(event)" disabled></button>
+            <button class="GreenDice" id="GreenDice4" onclick="movePieces(event)" disabled></button>
+            <button class="YellowDice" id="YellowDice1" onclick="movePieces(event)" disabled></button>
+            <button class="YellowDice" id="YellowDice2" onclick="movePieces(event)" disabled></button>
+            <button class="YellowDice" id="YellowDice3" onclick="movePieces(event)" disabled></button>
+            <button class="YellowDice" id="YellowDice4" onclick="movePieces(event)" disabled></button>
+            <button class="BlueDice" id="BlueDice1" onclick="movePieces(event)" disabled></button>
+            <button class="BlueDice" id="BlueDice2" onclick="movePieces(event)" disabled></button>
+            <button class="BlueDice" id="BlueDice3" onclick="movePieces(event)" disabled></button>
+            <button class="BlueDice" id="BlueDice4" onclick="movePieces(event)" disabled></button>
+            <button class="RedDice" id="RedDice1" onclick="movePieces(event)" disabled></button>
+            <button class="RedDice" id="RedDice2" onclick="movePieces(event)" disabled></button>
+            <button class="RedDice" id="RedDice3" onclick="movePieces(event)" disabled></button>
+            <button class="RedDice" id="RedDice4" onclick="movePieces(event)" disabled></button>
+            <div class="PlayerBox" id="GreenBox">
+                <div class="DiceBox" id="GreenDiceBox">
+                    <div class="Dice-1-Box" id="GreenDice-1-Box"></div>
+                    <div class="Dice-2-Box" id="GreenDice-2-Box"></div>
+                    <div class="Dice-3-Box" id="GreenDice-3-Box"></div>
+                    <div class="Dice-4-Box" id="GreenDice-4-Box"></div>
+                </div>
+            </div>
+            <div class="path" id="path-1">
+                <div class="line" id="line1">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+                <div class="line" id="line2">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+                <div class="line" id="line3">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+            </div>
+            <div class="path" id="path-2">
+                <div class="line" id="line1">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+                <div class="line" id="line2">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+                <div class="line" id="line3">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+            </div>
+            <div class="path" id="path-3">
+                <div class="line" id="line1">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+                <div class="line" id="line2">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+                <div class="line" id="line3">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+            </div>
+            <div class="path" id="path-4">
+                <div class="line" id="line1">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+                <div class="line" id="line2">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+                <div class="line" id="line3">
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                    <div id="position"></div>
+                </div>
+            </div>
+            <div class="PlayerBox" id="YellowBox">
+                <div class="DiceBox" id="YellowDiceBox">
+                    <div class="Dice-1-Box" id="YellowDice-1-Box"></div>
+                    <div class="Dice-2-Box" id="YellowDice-2-Box"></div>
+                    <div class="Dice-3-Box" id="YellowDice-3-Box"></div>
+                    <div class="Dice-4-Box" id="YellowDice-4-Box"></div>
+                </div>
+            </div>
+            <div class="PlayerBox" id="CenterBox">
+                <div class="Arrow">
+                    <!-- <div id="GreenArrow"></div>
+                <div id="YellowArrow"></div>
+                <div id="BlueArrow"></div>
+                <div id="RedArrow"></div> -->
+                </div>
+            </div>
+            <div class="PlayerBox" id="BlueBox">
+                <div class="DiceBox" id="BlueDiceBox">
+                    <div class="Dice-1-Box" id="BlueDice-1-Box"></div>
+                    <div class="Dice-2-Box" id="BlueDice-2-Box"></div>
+                    <div class="Dice-3-Box" id="BlueDice-3-Box"></div>
+                    <div class="Dice-4-Box" id="BlueDice-4-Box"></div>
+                </div>
+            </div>
+            <div class="PlayerBox" id="RedBox">
+                <div class="DiceBox" id="RedDiceBox">
+                    <div class="Dice-1-Box" id="RedDice-1-Box"></div>
+                    <div class="Dice-2-Box" id="RedDice-2-Box"></div>
+                    <div class="Dice-3-Box" id="RedDice-3-Box"></div>
+                    <div class="Dice-4-Box" id="RedDice-4-Box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Ludo.js"></script>
+</body>
+
+</html>
